@@ -1,6 +1,6 @@
 
 <main>
-  <h1 id="burger-title">Burgers!</h1>
+  <h1>Burgers!</h1>
   <div class="row">
     <div class="col-md-6 float-left">
 
@@ -25,13 +25,19 @@
     {{/each}}
 </ul>
 </div>
-<div class="burger-form">
+<div class="burger">
 <h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="burg">Burger:</label>
     <input type="text" id="burg" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devo">Hungry?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input type="radio" name="devoured" value="0"> Ready to eat
   </div>
 
   <button type="submit">Add Burger</button>
