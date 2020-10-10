@@ -1,7 +1,40 @@
+body{
+  background: beige;
+}
+
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: #e9a040;
+  }
+
+  li:nth-child(1):before {
+    color: green;
+  }
+  
+  li:nth-child(2):before {
+    color:rgba(85, 38, 6, 0.486);
+  }
+  
+  li:nth-child(3):before {
+    color: rgb(179, 41, 41);
+  }
+
+  .btns {
+    border-radius: 25%;
+    transition-duration: 0.4s;
+  }
+  
+  .btns:hover {
+    background-color: #4CAF50; 
+    color: white;
+  }
+
+  #switch-burger-title{
+    text-align: center;
+    background-color: brown;
+    border-top-right-radius: 25%;
+    border-top-left-radius: 25%;
   }
   
   .label {
