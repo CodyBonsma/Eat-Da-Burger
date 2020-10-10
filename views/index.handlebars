@@ -1,48 +1,47 @@
-
-<main>
-  <h1>Burgers!</h1>
-  <div class="row">
+<container class="main-container">
+  <img src="https://image.flaticon.com/icons/png/512/403/403644.png" alt="burger icon" id="burger-icon">
+  <h1 id="burger-title">Burgers!</h1>
+  <div class="row burger-switch">
     <div class="col-md-6 float-left">
 
-<h2>Burgers that are ready to eat</h2>
+      <h2 id="switch-burger-title">Burgers that are ready to eat</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devour=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-</div>
-<div class="col-md-6">
-<h2>Burgers that have been devoured</h2>
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devour=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h2>Burgers that have been devoured</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devour=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-</div>
-<div class="burger">
-<h2>Add a Burger</h2>
-<form class="create-form">
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devour=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="burger">
+      <h2>Add a Burger</h2>
+      <form class="create-form include-burger">
 
-  <div class="form-group">
-    <label for="burg">Burger:</label>
-    <input type="text" id="burg" name="name">
+        <div class="form-group">
+          <label for="burg">Burger:</label>
+          <input type="text" id="burg" name="name">
+        </div>
+
+        <div class="form-group">
+          {{!-- <label for="devo">Hungry?</label><br> --}}
+          {{!-- <input type="radio" name="devoured" value="1" checked> Devour!<br> --}}
+          {{!-- <input type="radio" name="devoured" value="0"> Ready to eat --}}
+        </div>
+
+        <button type="submit">Add Burger</button>
+      </form>
+    </div>
   </div>
-
-  <div class="form-group">
-    {{!-- <label for="devo">Hungry?</label><br> --}}
-    <input type="radio" name="devoured" value="1" checked> Devoure!<br>
-    {{!-- <input type="radio" name="devoured" value="0"> Ready to eat --}}
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
-</div>
-</div>
-</main>
-
+</container>

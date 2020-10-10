@@ -25,3 +25,34 @@ li {
   #burger-title{
     text-align: center;
   }
+
+  .include-burger{
+    align-content: center;
+  }
+
+  .main-container{
+    margin: 30%;
+    margin-left: 50px;
+  }
+
+  .burger-switch{
+    margin: 50px;
+    padding: 10px;
+  }
+
+  .burger{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  #burger-icon{
+    width:200px; 
+    height:175px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
