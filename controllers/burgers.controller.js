@@ -15,13 +15,15 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (res, req) {
-    console.log(req.body);
+    console.log(res.body);
     burger.create([
         "burger_name", "devoured"
-    ], [res.body.burger_name, res.body.devour], function (result) {
-        // console.log(result);
+    ], [res.body.burger_name, res.body.devour],
+    function (result) {
+        console.log(res.body);
         console.log("You reached this point");
-        // res.json({ id: result.insertId });
+        req.json({ id: result.insertId });
+        
     });
 });
 
@@ -29,7 +31,7 @@ router.put("/api/burgers/:id", function (req, res) {
     const condition = "id = " + req.params.id;
 
     console.log("condition", condition);
-    console.log(req.body);
+    // console.log(req.body);
 
     burger.update({
         devoured: req.body.devoured
