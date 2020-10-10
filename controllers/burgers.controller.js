@@ -15,20 +15,24 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (res, req) {
+    console.log(res);
     burger.create([
         "burger_name", "devoured"
-    ], [req.body.burger_name, req.body.devour], function (result) {
-        res.json({ id: result.insertId });
+    ], [res.body.burger_name, res.body.devour], function (result) {
+        console.log(result);
+        console.log("You reached this point");
+        // res.json({ id: result.insertId });
     });
 });
 
-router.put("api/burgers/:id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
     const condition = "id = " + req.params.id;
 
     console.log("condition", condition);
+    console.log(req.body);
 
     burger.update({
-        devour: req.body.devour
+        devoured: req.body.devoured
     }, condition, function (result) {
         if (result.changedRows == 0) {
             return res.status(404).end();

@@ -17,3 +17,11 @@ li {
   .form-group {
     margin-bottom: 5px;
   }
+
+  .burger-form{
+    align-content: center;
+  }
+
+  #burger-title{
+    text-align: center;
+  }
